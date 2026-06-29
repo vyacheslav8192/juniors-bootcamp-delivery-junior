@@ -1,25 +1,27 @@
 import type { ReactNode } from "react";
+
 import clsx from "clsx";
+
 import { BaseButton } from "../base-button/base-button";
 import styles from "./button.module.css";
 
 namespace Button {
-  export type Size = "large" | "regular" | "small";
-  export type Variant = BaseButton.Variant;
   export type Props = BaseButton.Props & {
-    size?: Size;
     leftSection?: ReactNode;
     rightSection?: ReactNode;
+    size?: Size;
   };
+  export type Size = "large" | "regular" | "small";
+  export type Variant = BaseButton.Variant;
 }
 
 const Button = (props: Button.Props) => {
   const {
+    children,
     className,
-    size = "regular",
     leftSection,
     rightSection,
-    children,
+    size = "regular",
     ...restProps
   } = props;
 

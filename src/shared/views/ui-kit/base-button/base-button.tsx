@@ -1,10 +1,12 @@
-import clsx from "clsx";
 import type { ComponentProps } from "react";
+
+import clsx from "clsx";
+
 import styles from "./base-button.module.css";
 
 namespace BaseButton {
-  export type Variant = "primary" | "secondary" | "outline" | "ghost";
   export type Props = ComponentProps<"button"> & { variant?: Variant };
+  export type Variant = "ghost" | "outline" | "primary" | "secondary";
 }
 
 const BaseButton = (props: BaseButton.Props) => {
@@ -13,8 +15,8 @@ const BaseButton = (props: BaseButton.Props) => {
   return (
     <button
       className={clsx(styles.button, className)}
-      type="button"
       data-variant={variant}
+      type="button"
       {...restProps}
     />
   );

@@ -1,7 +1,8 @@
 import type { PropsWithChildren } from "react";
-import styles from "./layout.module.css";
+
 import { Header } from "../header/header";
 import { LayoutContainer } from "../layout-container/layout-container";
+import styles from "./layout.module.css";
 
 namespace Layout {
   export type Props = PropsWithChildren;
