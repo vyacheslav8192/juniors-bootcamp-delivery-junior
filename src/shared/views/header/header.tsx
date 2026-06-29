@@ -1,26 +1,10 @@
-import type { PropsWithChildren } from "react";
-
 import { HistoryIcon, LogOutIcon, UserIcon } from "lucide-react";
 
 import deliveryBoxImage from "~/assets/images/delivery-box.png";
 
 import { Button } from "../ui-kit/button/button";
-import { IconButton } from "../ui-kit/icon-button/icon-button";
+import { HeaderIconButton } from "./header-icon-button";
 import styles from "./header.module.css";
-
-namespace HeaderIconButton {
-  export type Props = PropsWithChildren;
-}
-
-const HeaderIconButton = (props: HeaderIconButton.Props) => {
-  const { children } = props;
-
-  return (
-    <IconButton radius="round" size="small" variant="secondary">
-      {children}
-    </IconButton>
-  );
-};
 
 const Header = () => {
   return (
