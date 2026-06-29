@@ -129,7 +129,7 @@
   --color-primary-foreground: var(--color-neutral-50);
   --color-secondary: var(--color-neutral-100);
   --color-secondary-hover: var(--color-neutral-200);
-  --color-foreground: var(--color-neutral-900);
+  --color-secondary-foreground: var(--color-neutral-900);
   --color-outline: var(--color-neutral-100);
   --color-ghost-hover: var(--color-neutral-100);
   --color-ghost-foreground: var(--color-neutral-900);
