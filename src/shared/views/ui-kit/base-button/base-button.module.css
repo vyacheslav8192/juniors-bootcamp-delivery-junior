@@ -1,0 +1,73 @@
+/*
+--base-button-border-radius
+--base-button-color
+--base-button-hover-box-shadow
+--base-button-border
+--base-button-hover-border
+--base-button-disabled-border
+--base-button-background-color
+--base-button-hover-background-color
+--base-button-disabled-opacity
+*/
+
+.button {
+  --base-button-border: none;
+  --base-button-disabled-border: var(--base-button-border);
+  --base-button-hover-border: var(--base-button-border);
+
+  border: var(--base-button-border);
+
+  background-color: var(--base-button-background-color);
+  color: var(--base-button-color);
+  border-radius: var(--base-button-border-radius);
+
+  &:disabled {
+    opacity: var(--base-button-disabled-opacity);
+    border: var(--base-button-disabled-border);
+  }
+
+  &:not(:disabled):is(:hover, :focus) {
+    background-color: var(--base-button-hover-background-color);
+    border: var(--base-button-hover-border);
+    box-shadow: var(--base-button-hover-box-shadow);
+  }
+
+  /* variant */
+  &[data-variant="primary"] {
+    --base-button-background-color: var(--color-primary);
+    --base-button-color: var(--color-primary-foreground);
+    --base-button-hover-background-color: var(--color-primary-hover);
+
+    --base-button-disabled-opacity: 0.2;
+  }
+
+  &[data-variant="secondary"] {
+    --base-button-background-color: var(--color-secondary);
+    --base-button-color: var(--color-secondary-foreground);
+    --base-button-hover-background-color: var(--color-secondary-hover);
+
+    --base-button-disabled-opacity: 0.7;
+  }
+
+  &[data-variant="outline"] {
+    --base-button-background-color: var(--color-outline);
+    --base-button-color: var(--color-foreground);
+    --base-button-hover-background-color: var(--color-outline);
+
+    --base-button-disabled-opacity: 0.2;
+
+    --base-button-border: 1px solid var(--color-ring);
+    --base-button-hover-border: 1px solid var(--color-accent-secondary);
+    --base-button-disabled-border: 1px solid var(--color-border-hard);
+    --base-button-hover-box-shadow: -2px 2px 0px 0px
+      var(--color-accent-secondary);
+  }
+
+  &[data-variant="ghost"] {
+    --base-button-background-color: transparent;
+    --base-button-color: var(--color-ghost-foreground);
+    --base-button-hover-background-color: var(--color-ghost-hover);
+
+    --base-button-disabled-opacity: 0.4;
+  }
+}

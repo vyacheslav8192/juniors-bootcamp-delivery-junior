@@ -1,0 +1,68 @@
+/*
+--icon-button-size
+--icon-button-border-radius
+--icon-button-color
+--icon-button-hover-box-shadow
+--icon-button-border
+--icon-button-hover-border
+--icon-button-disabled-border
+--icon-button-background-color
+--icon-button-hover-background-color
+--icon-button-disabled-opacity
+*/
+
+/*
+--base-button-border-radius
+--base-button-color
+--base-button-hover-box-shadow
+--base-button-border
+--base-button-hover-border
+--base-button-disabled-border
+--base-button-background-color
+--base-button-hover-background-color
+--base-button-disabled-opacity
+*/
+
+.button {
+  --base-button-color: var(--icon-button-color);
+  --base-button-hover-box-shadow: var(--icon-button-hover-box-shadow);
+  --base-button-border: var(--icon-button-border);
+  --base-button-hover-border: var(--icon-button-hover-border);
+  --base-button-disabled-border: var(--icon-button-disabled-border);
+  --base-button-background-color: var(--icon-button-background-color);
+  --base-button-hover-background-color: var(
+    --icon-button-hover-background-color
+  );
+  --base-button-disabled-opacity: var(--icon-button-disabled-opacity);
+  --base-button-border-radius: var(--icon-button-border-radius);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: var(--icon-button-size);
+  height: var(--icon-button-size);
+  aspect-ratio: 1 / 1;
+
+  /* size */
+  &[data-size="large"] {
+    --icon-button-size: 52px;
+  }
+
+  &[data-size="regular"] {
+    --icon-button-size: 40px;
+  }
+
+  &[data-size="small"] {
+    --icon-button-size: 32px;
+  }
+
+  /* radius */
+  &[data-radius="default"] {
+    --icon-button-border-radius: 8px;
+  }
+
+  &[data-radius="round"] {
+    --icon-button-border-radius: 50%;
+  }
+}
