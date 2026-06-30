@@ -14,8 +14,10 @@ const Layout = (props: Layout.Props) => {
   return (
     <LayoutContainer>
       <div className={styles.layout}>
-        <Header />
-        <main className={styles.main}>{children}</main>
+        <div className={styles.header}>
+          <Header />
+        </div>
+        <main>{children}</main>
       </div>
     </LayoutContainer>
   );
