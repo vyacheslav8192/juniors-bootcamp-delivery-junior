@@ -1,0 +1,83 @@
+.inputContainer {
+  border: 1px solid var(--color-input);
+  border-radius: 100vmax;
+  box-shadow: 0px 1px 2px 0px #0000000d;
+  cursor: text;
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+  padding-inline: 16px;
+  max-width: fit-content;
+  color: var(--color-foreground);
+
+  &:has(.input:placeholder-shown:not(:focus)) {
+    color: var(--color-input);
+  }
+
+  &:focus-within {
+    box-shadow: 0px 0px 0px 3px var(--color-ring);
+    border-color: var(--color-border-soft);
+  }
+
+  &[data-size="large"] {
+    padding-block: 14px;
+  }
+
+  &[data-size="regular"] {
+    padding-block: 8px;
+  }
+
+  &[data-size="small"] {
+    padding-block: 4px;
+  }
+}
+
+.input {
+  display: inline-block;
+  font-family: Nunito;
+  font-weight: 400;
+  color: currentColor;
+
+  line-height: 24px;
+  letter-spacing: 0.5;
+
+  outline: none;
+
+  border: none;
+
+  &::placeholder {
+    color: var(--color-input);
+  }
+
+  .inputContainer[data-size="large"] & {
+    font-size: 24px;
+  }
+
+  .inputContainer[data-size="regular"] & {
+    font-size: 20px;
+  }
+
+  .inputContainer[data-size="small"] & {
+    font-size: 18px;
+  }
+}
+
+.section {
+  color: currentColor;
+
+  .inputContainer[data-size="large"] & {
+    font-size: 20px;
+  }
+
+  .inputContainer[data-size="regular"] & {
+    font-size: 16px;
+  }
+
+  .inputContainer[data-size="small"] & {
+    font-size: 16px;
+  }
+
+  &:empty {
+    display: none;
+  }
+}
